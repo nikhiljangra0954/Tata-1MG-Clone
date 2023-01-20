@@ -1,0 +1,39 @@
+.about_us>div>img{
+    width: 70%;
+}
+.footer{
+    width: 90%;
+    margin: auto;
+}
+.footer p{
+    color: grey;
+}
+.about_us{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.about_us>div>input{
+    width: 100%;
+    border: none;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: black;
+    border-radius: 5px;
+}
+.about_us>div>button{
+    width: 100%;
+    border: none;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(255, 111, 97);
+    cursor: pointer;
+}

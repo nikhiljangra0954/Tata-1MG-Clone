@@ -1,0 +1,98 @@
+.banners{
+    /* border: red solid 1px; */
+    width: 80%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+
+.slider{
+    /* border: blue solid 1px; */
+    width: 60.5%;
+    height: 100%;
+}
+.sidebanner{
+    /* border: purple solid 1px; */
+    width: 40%;
+    height: 100%;
+}
+.brands_logo h4{
+    text-align: left;
+    color: black;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+.main{
+    text-align: center;
+}
+.potato img{
+ border-radius: 5px 5px 0px 0px;
+}
+.potato p{
+    text-align: left;
+   }
+.main h1{
+    color: grey;
+}
+hr{
+    color: grey;
+}
+.main2{
+    width: 82%;
+    height: auto;
+    /* border: red solid 1px; */
+    margin: auto;
+}
+.features{
+    display: flex;
+    justify-content: space-between;
+}
+.features h3{
+    color: grey;
+    font-weight: 100;
+    margin-bottom: -10px;
+}
+.features button{
+    background-color: rgb(255, 111, 97);
+    width: 80px;
+    height: 30px;
+    border: 0;
+    border-radius: 6px;
+    color: #f1f4f6;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    margin-left: -120px;
+    margin-top: 18px;
+}
+.brands_logo{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: gray;
+}
+.brands_logo div{
+    cursor: pointer;
+    border-radius: 8px;
+}
+.brands_logo div:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.Products{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.Products div{
+  cursor: pointer;
+  overflow-wrap: break-word;
+  position: relative;
+  border-radius: 10px;
+}
+.Products div:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.accu img{
+    margin-bottom: 45px;
+}
