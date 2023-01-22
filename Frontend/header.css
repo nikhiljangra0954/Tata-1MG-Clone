@@ -7,6 +7,10 @@ body{
     justify-content: space-around; 
     background-color: white;
 }
+.top a{
+    text-decoration: none;
+    color: black;
+}
 .tests{
     display: flex;
     justify-content: space-between; 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.ibb.co/BsYPv6t/Grocery-Store.png" type="image/x-icon">
+    <link rel="icon" href="https://i.ibb.co/BsYPv6t/Grocery-Store.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="adminpanel.css">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <div id="top-section">
+        <h1>Admin Panel</h1>
+        <a id="logout-link" href="./login-signup/signup_login.html">Log Out</a>
+    </div>
+    <div id="main-div">
+        <div id="add_item_form">
+            <h1>Add Product to API  </h1>
+            <form action="">
+                <label for="">Product Name</label><br>
+                <input id="name" type="text" placeholder="Product name"> <br>
+                <label for="">Price of Product</label><br>
+                <input id="price" type="number" placeholder="Product Price"><br>
+                <label id="" for="">Rating</label> <br>
+                <input type="number" id="rating" placeholder="Rating"><br>
+                <label for="">Image URL</label><br>
+                <input id="img" type="text" placeholder="URL"><br>
+                <!-- <label for="">Category</label><br> -->
+              <br>  <input type="submit">
+
+            </form>
+        </div>
+        <div id="users_table">
+            <h1>Registered Users</h1>
+            <table  >
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody id="table_body">
+                    <!-- <tr>
+                        <td>Abhi Panchal</td>
+                        <td>12345678</td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Abhi Panchal</td>
+                        <td>12345678</td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Abhi Panchal</td>
+                        <td>12345678</td>
+                        <td><button>Delete</button></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="bottom_section">
+        
+
+    </div>
+   
+</body>
+</html>
+<script src="adminpanel.js"></script>

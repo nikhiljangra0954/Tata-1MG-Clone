@@ -1,66 +1,28 @@
-const express = require("express");
-const { connection } = require("./config/db.js");
-const { userRouter } = require("./routes/user.routes.js");
-const { noteRouter } = require("./routes/Note.routes.js");
-const { authenticate } = require("./middlewares/authenticate.middleware.js");
+// here we do all the connections and routes handling
+
+const express = require('express');
+const cors = require('cors');
+const { connection } = require("./config/db");
+// const { authentication } = require('./middlewares/authentication.middleware');
+const { postrouter } = require('./routes/data.routes');
+const { userrouter } = require('./routes/users.routes');
 const app = express();
-
 app.use(express.json());
-app.use("/users", userRouter);
-app.use(authenticate);
-app.use("/notes", noteRouter);
+app.use(cors())
+// app.get("/",(req,res)=>{
+//     res.send("Home Page")
+// })
+app.use("/users",userrouter)
+// app.use(authentication)
+app.use("/data", postrouter)
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
-// app.get("/data", async (req, res) => {
-//   const token = req.headers.authorization;
-//   jwt.verify(token, "masai", (err, decoded) => {
-//     if (err) {
-//       console.log(err);
-//       res.send(`Invalid Token`);
-//     } else {
-//       // console.log(decoded);
-//       res.send("Data...");
-//     }
-//   });
-// });
-
-// app.get("/contact", async (req, res) => {
-//   res.send("Contact");
-// });
-
-app.get("/cart", async (req, res) => {
-  const token = req.query.token;
-  jwt.verify(token, "masai", (err, decoded) => {
-    if (err) {
-      console.log(err);
-      res.send(`Invalid Token`);
-    } else {
-      // console.log(decoded);
-      res.send("Cart Page");
+app.listen(process.env.port, async (req, res)=>{
+    try {
+        await connection
+        console.log("Connect success")
+    } catch (error) {
+        console.log(error);
+        res.send({msg: error.message})
     }
-  });
-});
-
-app.listen(8080, async () => {
-  try {
-    await connection;
-    console.log("Connection Established");
-  } catch (error) {
-    console.log("Err: Connection in DB");
-    console.log(error);
-  }
-  console.log("listening on port 8080");
-});
-
-
-// {
-//   "title":"Frontend",
-//   "note":"Crud PSC",
-//   "catagory":"Live Session",
-//   "author":"Sitansu"
-// }
-
-
+    console.log(`Connected to the ${process.env.port}`)
+})
